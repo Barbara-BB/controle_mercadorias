@@ -1,0 +1,5 @@
+package br.com.springcurso.fullstack.controllers;
+
+public class CategoryController {
+
+}

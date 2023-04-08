@@ -1,0 +1,5 @@
+package br.com.springcurso.fullstack.services;
+
+public class ProductService {
+
+}
