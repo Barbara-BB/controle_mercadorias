@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.springcurso.fullstack.entities.Product;
-import br.com.springcurso.fullstack.exceptions.ResourceNotFoundExceptions;
 import br.com.springcurso.fullstack.respositories.ProductRepository;
 
 @Service
@@ -21,7 +20,7 @@ public class ProductService {
 	
 	public Product findById(Long Id){
 		Optional<Product> obj = repository.findById(Id);
-		return obj.orElseThrow(()-> new ResourceNotFoundExceptions(Id));
+		return obj.get();
 	}
 	
 	public Product save(Product product) {
